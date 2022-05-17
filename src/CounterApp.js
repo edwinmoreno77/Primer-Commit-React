@@ -23,8 +23,10 @@ const CounterApp = ({ value }) => {
     }
 
     return (
-        <div >
-            <h1>Counter App</h1>
+        <div>
+            <div className='div'>
+                <h1>Counter App</h1>
+            </div>
             <div className='div'>
                 <h2> {counter} </h2>
             </div>
@@ -32,6 +34,17 @@ const CounterApp = ({ value }) => {
                 <button onClick={handleAdd}>+1</button>
                 <button onClick={handleReset}>Reset</button>
                 <button onClick={handleSubtract}>-1</button>
+            </div>
+            <div className='div'>
+                <label>capital:</label>
+                <input placeholder='Ingrese su Capital'></input>
+                <label>interes:</label>
+                <input placeholder='Ingrese el Interes'></input>
+                <label>meses:</label>
+                <input placeholder='Ingrese los meses'></input>
+            </div>
+            <div className='div'>
+                <button>Calcular</button>
             </div>
         </div>
     )
