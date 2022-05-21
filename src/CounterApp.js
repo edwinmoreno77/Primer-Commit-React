@@ -6,7 +6,12 @@ import PropTypes from 'prop-types'
 const CounterApp = ({ value }) => {
 
     const [counter, setCounter] = useState(0);
-    // const calcular = document.querySelector('#calcular');
+
+
+
+    //esta seccion sera para interes compuesto
+
+    //const calcular = document.querySelector('#calcular');
 
 
 
