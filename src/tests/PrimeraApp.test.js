@@ -1,17 +1,25 @@
 import React from 'react';
-import { render } from "@testing-library/react";
+import { shallow } from 'enzyme'
+// import { render } from "@testing-library/react";
 import PrimeraApp from "../PrimeraApp";
-import '@testing-library/jest-dom/extend-expect';
+// import '@testing-library/jest-dom/extend-expect';
 
 
 describe('Pruebas en PrimeraApp', () => {
 
-    test('Debe de mostrat el mensaje "Hola, soy Goku"', () => {
+    // test('Debe de mostrat el mensaje "Hola, soy Goku"', () => {
 
-        const saludo = 'Hola, soy Goku';
+    //     const saludo = 'Hola, soy Goku';
 
-        const { getByText } = render(<PrimeraApp saludo={saludo} />);
+    //     const { getByText } = render(<PrimeraApp saludo={saludo} />);
 
-        expect(getByText(saludo)).toBeInTheDocument();
+    //     expect(getByText(saludo)).toBeInTheDocument();
+    // })
+
+    test('Debe de mostrar <PrimeraApp/> correctamente', () => {
+
+        const saludo = 'hola, soy goku';
+        const wrapper = shallow(<PrimeraApp saludo={saludo} />);
     })
+
 })

@@ -1,2 +1,2 @@
-Counter App.
-este es un ejercicio con React.
+# Counter App.
+este es un ejercicio con React y de test
