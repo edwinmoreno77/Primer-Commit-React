@@ -17,8 +17,11 @@
 //------------------------------------------ v17
 import React from 'react';//  v17 y v18 
 import ReactDOM from 'react-dom';//v17
+import CounterApp from './CounterApp'
 import './index.css';
 
-const saludo = <h1>hola mundo</h1>;// v17
+// const saludo = <h1>hola mundo</h1>;// v17
 const divRoot = document.querySelector('#root');//v17
-ReactDOM.render(saludo, divRoot);//v17
+ReactDOM.render(<CounterApp />, divRoot);
+
+// ReactDOM.render(saludo, divRoot);//v17

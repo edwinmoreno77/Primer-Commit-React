@@ -1,7 +1,7 @@
 
-// import { Fragment } from "react";
+// import { Fragment } from "react";//v18
 import PropTypes from 'prop-types';
-// import React, { Fragment } from "react";// v17
+import React, { Fragment } from "react";// v17
 
 //FC
 const PrimeraApp = ({ saludo, subtitulo }) => {

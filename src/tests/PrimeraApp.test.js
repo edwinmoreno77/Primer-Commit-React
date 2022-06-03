@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme'
+import '@testing-library/jest-dom';
+import { shallow } from 'enzyme';
 // import { render } from "@testing-library/react";
 import PrimeraApp from "../PrimeraApp";
 // import '@testing-library/jest-dom/extend-expect';
@@ -20,6 +21,19 @@ describe('Pruebas en PrimeraApp', () => {
 
         const saludo = 'hola, soy goku';
         const wrapper = shallow(<PrimeraApp saludo={saludo} />);
+
+        expect(wrapper).toMatchSnapshot();
+    })
+
+    test('Debe de mostrar el subtitulo enviado por props', () => {
+        const saludo = 'Hola, soy Goku';
+        const subTitulo = 'Soy un subtitulo';
+
+        const wrapper = shallow(<PrimeraApp saludo={saludo} subtitulo={subTitulo} />);
+
+        const textoParrafo = wrapper.find('p').text();
+
+        expect(textoParrafo).toBe(subTitulo);
     })
 
 })
