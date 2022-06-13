@@ -8,7 +8,8 @@ describe('Pruebas con async-await y fetch', () => {
         const url = await getImagen();
 
         // expect(typeof url).toBe('string');
-        expect(url.includes('https://')).toBe(true);
+        // expect(url.includes('https://')).toBe(true);
+        expect(typeof url).toBe('string');
 
     })
 })
