@@ -1,9 +1,10 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { shallow } from 'enzyme';
+import { render, shallow } from 'enzyme';
 // import { render } from "@testing-library/react";
 import PrimeraApp from "../PrimeraApp";
-// import '@testing-library/jest-dom/extend-expect';
+import { getByAltText, getByText } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
 
 describe('Pruebas en PrimeraApp', () => {
@@ -17,12 +18,15 @@ describe('Pruebas en PrimeraApp', () => {
     //     expect(getByText(saludo)).toBeInTheDocument();
     // })
 
-    test('Debe de mostrar <PrimeraApp/> correctamente', () => {
+    test('<PrimeraApp/> Debe hacer match con snapshot', () => {
 
         const saludo = 'hola, soy goku';
-        const wrapper = shallow(<PrimeraApp saludo={saludo} />);
+        // const wrapper = shallow(<PrimeraApp saludo={saludo} />);//otra forma de hacerlo
 
-        expect(wrapper).toMatchSnapshot();
+        // expect(wrapper).toMatchSnapshot();
+        const { container } = render(<PrimeraApp saludo={saludo} />);
+
+        expect(container).toMatchSnapshot();
     })
 
     test('Debe de mostrar el subtitulo enviado por props', () => {
@@ -34,6 +38,7 @@ describe('Pruebas en PrimeraApp', () => {
         const textoParrafo = wrapper.find('p').text();
 
         expect(textoParrafo).toBe(subTitulo);
-    })
+    });
+
 
 })

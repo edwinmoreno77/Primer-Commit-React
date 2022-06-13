@@ -1,12 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en PrimeraApp Debe de mostrar <PrimeraApp/> correctamente 1`] = `
-<Fragment>
-  <h1>
-    hola, soy goku
-  </h1>
-  <p>
-    Soy un subtitulo
-  </p>
-</Fragment>
-`;
+exports[`Pruebas en PrimeraApp <PrimeraApp/> Debe hacer match con snapshot 1`] = `undefined`;
